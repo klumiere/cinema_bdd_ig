@@ -1,0 +1,48 @@
+<html>
+<head>
+<title> Recherche  de Films par Genre </title>
+</head>
+<body>
+
+<!-- on séléctionne un genre parmi la liste proposée-->
+<form role="search" action="{{url_for('results_films_par_genre')}}" method="POST">
+
+<!--<form role="search"> -->
+    <label class="label">Genre :</label>
+                            <div class="rs-select2 js-select-simple select--no-search" required>
+                                <select name="rech_genre">
+                                    <option disabled="disabled" selected="selected">Sélectionnez un genre de Film</option>
+                                    
+                                    <option>Aventure</option>
+                                    <option>Action</option>
+                                    <option>Comédie</option>
+                                    <option>Crime</option>
+                                    <option>Drame</option>
+                                    <option>Fantastique</option>
+                                    <option>Guerre</option>
+                                    <option>Histoire</option>
+                                    <option>Horreur</option>
+                                    <option>Musique</option>
+                                    <option>Mystère</option>
+                                    <option>Romance</option>
+                                    <option>Science-Fiction</option>
+                                    <option>Thriller</option>
+                                    <option>Western</option>
+                                    
+                                    </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                         
+               <br><br>
+               
+                 <div class="form-group"><button type="submit" class="form-control btn btn-primary submit px-3">Valider</button></div>
+    
+</form>
+
+
+</body>
+</html>

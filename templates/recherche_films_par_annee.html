@@ -1,0 +1,24 @@
+<html>
+<head>
+<title> Recherche  de Films par Année </title>
+</head>
+<body>
+
+
+<form role="search" action="{{url_for('results_films_par_annee')}}" method="POST">
+
+<!--<form role="search"> -->
+  <div>
+    <input
+      type="search"
+      id="mySearch"
+      name="rech_annee"
+      placeholder="Saisir l'année du/des films recherché(s)"
+      aria-label="Search through site content" />
+    <input type="submit" value="Rechercher"/>
+  </div>
+</form>
+
+
+</body>
+</html>

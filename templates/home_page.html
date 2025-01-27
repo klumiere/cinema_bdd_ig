@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html  lang="fr">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Page d'accueil de la BDD FILMS-->
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  
+  padding: 20px;
+  font-family: cursive;
+  
+  background-image:
+  url("/static/img/cine.jpg");
+  
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+  
+  
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 10px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33%;
+  
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 20px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1000px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+<h1>Bienvenue {{genre}} {{prenom}} {{nom}} !</h1>
+<h2>Vous êtes bien connecté(e) dans la base de données FILM</h2>
+<hr>
+
+
+<h2>Sélectionne une catégorie</h2>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column">
+    <div class="content">
+    
+      <img src="static/img/film.jpg"  style="width:100%" >
+      <h3>Films</h3>
+      
+     <!-- En cliquant sur le texte en dessous, renvoit vers une page de recherche de Films-->
+      <p>Envie de retrouver tous les détails d'un film, appuyer <a href="{{ url_for('films') }}" target='_blank'>ici</a> !</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="static/img/recherche.jpg" alt="Lights" style="width:100%">
+      <h3>Recherche</h3>
+      <p> Effectue une recherche avancée dans la base de données <a href="{{ url_for('recherche_avancee') }}" target='_blank'>ici</a> ! </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="/static/img/art.jpeg"  style="width:100%">
+      <h3>Artiste</h3>
+      
+     <p>Retrouve tous les films joués par ton acteur préféré <a href="{{ url_for('artistes') }}" target='_blank'>ici</a> !</p>
+    </div>
+  </div>
+
+  </div>
+<!-- END GRID -->
+
+
+
+
+</body>
+</html>

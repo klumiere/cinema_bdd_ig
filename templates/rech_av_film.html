@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <title>Recherche avancée de Films</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='{{url_for('static',filename='css/log.css')}}'
+    
+  </head>
+  
+  
+ 
+ 
+ <!--Mettre l'image en arrière plan --> 
+   <body class="img js-fullheight" background="{{ url_for('static', filename='img/recherche.jpg') }}" > 
+   
+ <form action="{{url_for('results_rech_av')}}" method="POST">
+  
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center mb-5">
+            <h2 class="heading-section">Je cherche un film </h2>
+          </div>
+        </div>
+        
+        
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-lg-4">
+            <div class="login-wrap p-0">
+              <h3 class="mb-4 text-center"></h3>
+              <form action="#" class="signin-form">
+               
+                
+                 <label class="label">Genre :</label>
+                            <div class="rs-select2 js-select-simple select--no-search" >
+                                <select name="genre">
+                                    <option disabled="disabled" required selected="selected">Sélectionnez un genre de Film</option>
+                                    <!-- Liste de touts les genres de la table -->
+                                    <option>Aventure</option>
+                                    <option>Action</option>
+                                    <option>Comédie</option>
+                                    <option>Crime</option>
+                                    <option>Drame</option>
+                                    <option>Fantastique</option>
+                                    <option>Guerre</option>
+                                    <option>Histoire</option>
+                                    <option>Horreur</option>
+                                    <option>Musique</option>
+                                    <option>Mystère</option>
+                                    <option>Romance</option>
+                                    <option>Science-Fiction</option>
+                                    <option>Thriller</option>
+                                    <option>Western</option>
+                                    
+                                    
+                                    <option> </option>
+                                    </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+<br><br>
+
+                <div class="form-group"><input name="annee" type="text" class="form-control" placeholder="Année" required></div>
+                
+               <label class="label">Pays :</label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="code_pays">
+                                    <option disabled="disabled" selected="selected">Sélectionnez un code pays</option>
+                                    <!-- Liste de tout les code pays -->
+                                    <option>AU</option>
+                                    <option>BE</option>
+                                    <option>CA</option>
+                                    <option>CN</option>
+                                    <option>CZ</option>
+                                    <option>DE</option>
+                                    <option>DK</option>
+                                    <option>ES</option>
+                                    <option>FR</option>
+                                    <option>GB</option>
+                                    <option>HK</option>
+                                    <option>IE</option>
+                                    <option>IT</option>
+                                    <option>JO</option>
+                                    <option>JP</option>
+                                    <option>KR</option>
+                                    <option>NO</option>
+                                    <option>NL</option>
+                                    <option>RU</option>
+                                    <option>SE</option>
+                                    <option>SU</option>
+                                    <option>US</option>
+                                    
+                                    
+                                    
+                                    <option> </option>
+                                    </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+               
+               <br><br>
+               
+                 <div class="form-group"><button type="submit" class="form-control btn btn-primary submit px-3">Valider</button></div>
+    </section>
+    
+    
+    <script src="/static/js/j1.js"></script>
+    <script src="/static/js/j2.js"></script>
+    <script src="/static/js/j3.js"></script>
+    <script src="/static/js/j4.js"></script>
+  </body>
+</html>
